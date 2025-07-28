@@ -1,0 +1,2 @@
+docker build -t todo-be ${PATH_TO_DOCKERFILE}
+docker run -p 3000:3000 todo-be 

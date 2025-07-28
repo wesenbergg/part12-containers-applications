@@ -1,0 +1,9 @@
+version: '3.8'
+
+services:
+  app:
+    image: todo-be
+    container_name: todo-be
+    build: .
+    ports:
+      - '3000:3000'

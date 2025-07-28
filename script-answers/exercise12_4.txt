@@ -1,0 +1,6 @@
+docker start -i nostalgic_benz
+apt update
+apt install curl
+apt install nodejs
+node /usr/src/app/index.js
+exit

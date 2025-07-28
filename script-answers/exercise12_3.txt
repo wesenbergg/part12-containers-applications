@@ -1,0 +1,4 @@
+docker start -i nostalgic_benz
+echo "console.log('Hello world')" > /usr/src/app/index.js
+cat /usr/src/app/index.js
+exit

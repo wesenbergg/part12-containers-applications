@@ -18,15 +18,9 @@ router.post("/", async (req, res) => {
   });
   await redis.setAsync(
     "added_todos",
-    (await redis.getAsync("added_todos")) + 1
+    Number(await redis.getAsync("added_todos")) + 1
   );
   res.send(todo);
-});
-
-router.get("/statistics", async (_, res) => {
-  res.json({
-    added_todos: (await redis.getAsync("added_todos")) || 0,
-  });
 });
 
 const singleRouter = express.Router();
@@ -44,7 +38,7 @@ singleRouter.delete("/", async (req, res) => {
   await req.todo.delete();
   await redis.setAsync(
     "added_todos",
-    (await redis.getAsync("added_todos")) - 1
+    Number(await redis.getAsync("added_todos")) - 1
   );
   res.sendStatus(200);
 });

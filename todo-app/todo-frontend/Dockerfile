@@ -6,14 +6,12 @@ COPY . .
 
 RUN npm ci
 
-ENV VITE_BACKEND_URL=http://localhost:3000
+ENV VITE_BACKEND_URL=http://localhost:8080/api
 
 RUN npm run lint
 RUN npm run test
 RUN npm run build
 
-FROM nginx:1.25-alpine
+RUN npm install -g serve
 
-EXPOSE 8080
-
-COPY --from=build-stage /usr/src/app/dist /usr/share/nginx/html
+CMD [ "serve", "-s", "dist" ]

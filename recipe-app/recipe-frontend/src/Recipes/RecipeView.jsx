@@ -9,6 +9,10 @@ const RecipeView = () => {
 
   const refreshRecipes = async () => {
     const { data } = await axios.get("/recipes");
+    if (!data || !Array.isArray(data)) {
+      console.info("Invalid data format received from server");
+      return;
+    }
     setRecipes(data);
   };
 

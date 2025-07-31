@@ -1,7 +1,7 @@
 import Recipe from "./Recipe";
 
 // eslint-disable-next-line react/prop-types
-const RecipeList = ({ recipes, deleteRecipe, completeRecipe }) => {
+const RecipeList = ({ recipes = [], deleteRecipe, completeRecipe }) => {
   const onClickDelete = (recipe) => () => {
     deleteRecipe(recipe);
   };

@@ -1,4 +1,4 @@
-const express = require("../$node_modules/express/index.js");
+const express = require("express");
 const router = express.Router();
 
 const configs = require("../util/config.js");

@@ -1,4 +1,4 @@
-const redis = require("../$node_modules/redis/index.js");
+const redis = require("redis");
 const { promisify } = require("util");
 const { REDIS_URL } = require("../util/config.js");
 

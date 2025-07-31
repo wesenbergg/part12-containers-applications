@@ -1,6 +1,6 @@
-const express = require("./$node_modules/express/index.js");
-const logger = require("./$node_modules/morgan/index.js");
-const cors = require("./$node_modules/cors/lib/index.js");
+const express = require("express");
+const logger = require("morgan");
+const cors = require("cors");
 
 const indexRouter = require("./routes/index");
 const statisticsRouter = require("./routes/statistics.js");

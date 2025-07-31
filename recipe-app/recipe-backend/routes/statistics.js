@@ -1,4 +1,4 @@
-const express = require("../$node_modules/express/index.js");
+const express = require("express");
 const redis = require("../redis/index.js");
 const router = express.Router();
 

@@ -1,9 +1,0 @@
-docker exec -it todo-backend-redis-1 redis-cli
-KEYS *
-GET added_todos
-SET added_todos 9001
-curl http://localhost:3000/statistics
-DEL added_todos
-curl -X POST http://localhost:3000/todos \
-  -H "Content-Type: application/json" \
-  -d '{"text": "Learn Docker"}'

@@ -1,5 +1,5 @@
-import { useState } from "../../$node_modules/@types/react/index.js";
-import PropTypes from "../../$node_modules/@types/prop-types/index.js";
+import { useState } from "react";
+import PropTypes from "prop-types";
 
 const RecipeForm = ({ createRecipe }) => {
   const [text, setText] = useState("");

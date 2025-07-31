@@ -1,4 +1,4 @@
-import { useEffect, useState } from "../../$node_modules/@types/react/index.js";
+import { useEffect, useState } from "react";
 import axios from "../util/apiClient.js";
 
 import List from "./List.jsx";

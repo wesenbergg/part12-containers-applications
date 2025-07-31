@@ -1,4 +1,4 @@
-import PropTypes from "../../$node_modules/@types/prop-types/index.js";
+import PropTypes from "prop-types";
 
 const Recipe = ({ recipe, onClickDelete, onClickComplete }) => {
   return (

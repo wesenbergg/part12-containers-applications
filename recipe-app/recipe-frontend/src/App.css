@@ -1,38 +1,166 @@
+/* Base styles and resets */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f8f9fa;
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  min-height: 100vh;
+}
+
+/* Header Styles */
+.App-header {
+  background: linear-gradient(135deg, #4a7bab 0%, #2c4c6b 100%);
   color: white;
+  padding: 2rem 0;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-.App-link {
-  color: #61dafb;
+.App-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.App-header p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+/* Main Content Styles */
+.App-content {
+  flex: 1;
+  padding: 2rem 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.section {
+  flex: 1;
+  min-width: 300px;
+  background-color: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.section:hover {
+  transform: translateY(-5px);
+}
+
+.section h1 {
+  color: #2c4c6b;
+  border-bottom: 2px solid #f0f0f0;
+  padding-bottom: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+/* Form Styles - These will be applied to the forms in RecipeView and IngredientView */
+form {
+  margin-bottom: 1.5rem;
+}
+
+input, button, textarea, select {
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+}
+
+input, textarea, select {
+  width: 100%;
+  margin-bottom: 0.75rem;
+}
+
+button {
+  background-color: #4a7bab;
+  color: white;
+  border: none;
+  padding: 0.6rem 1rem;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: #3a5d84;
+}
+
+/* List Styles */
+ul {
+  list-style: none;
+}
+
+li {
+  padding: 0.75rem;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+li:last-child {
+  border-bottom: none;
+}
+
+/* Button variations */
+.delete-btn {
+  background-color: #e74c3c;
+  margin-left: 0.5rem;
+}
+
+.delete-btn:hover {
+  background-color: #c0392b;
+}
+
+.complete-btn {
+  background-color: #2ecc71;
+  margin-left: 0.5rem;
+}
+
+.complete-btn:hover {
+  background-color: #27ae60;
+}
+
+/* Footer Styles */
+.App-footer {
+  background-color: #2c4c6b;
+  color: white;
+  text-align: center;
+  padding: 1.5rem 0;
+  margin-top: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
   }
-  to {
-    transform: rotate(360deg);
+  
+  .section {
+    min-width: 100%;
+  }
+  
+  .App-header h1 {
+    font-size: 2rem;
   }
 }

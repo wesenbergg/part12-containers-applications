@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import axios from "../../util/apiClient.js";
+import axios from "../util/apiClient.js";
 
 import List from "./List.jsx";
 import Form from "./Form.jsx";

@@ -40,7 +40,7 @@ const RecipeView = () => {
 
   return (
     <>
-      <h1>Recipes</h1>
+      <h1>Steps</h1>
       <Form createRecipe={createRecipe} />
       <List
         recipes={recipes}
